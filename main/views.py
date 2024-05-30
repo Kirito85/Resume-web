@@ -3,11 +3,14 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, "main/index.html")
+    data = {
+        'title': 'About me',
+    }
+    return render(request, "main/resume.html",data)
 
 def resume(request):
     data = {
-        'title': 'My career',
+        'title': 'About me',
         'values': ['some','121','hello'],
     }
     return render(request,"main/resume.html", data)

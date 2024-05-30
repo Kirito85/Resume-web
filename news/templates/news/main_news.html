@@ -1,0 +1,26 @@
+{% extends "main/layout.html" %}
+
+{%block title %}Main news page{% endblock %}
+
+
+{% block content %}
+     <div class="features">
+         <h1>Main page of the news</h1>
+         <p>Home page for buttons</p>
+         <a href="https://github.com/Kirito85?tab=repositories" ><button class="btn btn-warning">My Portfolio</button></a>
+         {% if news %}
+             {% for el in news %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <h6>{{ el.anons }}</h6>
+                    <h9>{{ el.full_text }}</h9>
+                    <a href="{% url 'news_detail' el.id %}"><button class="btn btn-warning">Read closer</button></a>
+                </div>
+             {% endfor %}
+         {% else %}
+            <p>Zero news!</p>
+         {% endif %}
+
+         {# Comment #}
+     </div>
+{% endblock %}

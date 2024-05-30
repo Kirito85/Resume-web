@@ -1,0 +1,16 @@
+{% extends "main/layout.html" %}
+
+{%block title %}{{ article.title }}{% endblock %}
+
+
+{% block content %}
+     <div class="features">
+         <h1>{{ article.title }}</h1>
+         <p>{{ article.date }}</p>
+         <p>{{ article.full_text }}</p>
+         <a href="{% url 'news_del' article.id%}" class="btn btn-danger">Delete</a>
+         <a href="{% url 'news_up' article.id%}" class="btn btn-info">Edit</a>
+         <a href="https://github.com/Kirito85?tab=repositories"><button class="btn btn-warning">My Portfolio</button></a>
+
+     </div>
+{% endblock %}

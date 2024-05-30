@@ -49,8 +49,8 @@ main .features{
     width: 75%;
 }
 
-main .features h1 {font-size:50px;}
-main .features p {max-width: 400px;margin: 20px auto;text-align: left;}\
+main .features h1 {font-size:50px; margin-top: -55px;}
+main .features p {max-width: auto;margin: 20px auto;text-align: left;float: left; margin-left: 25px;}\
 
 
 a {

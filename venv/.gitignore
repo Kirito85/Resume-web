@@ -464,3 +464,8 @@ Desktop.ini
 
 # Исключить личные настройки и временные файлы
 *.sublime-workspace
+
+*.pyc
+*.pyo
+
+__pycache__/

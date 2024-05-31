@@ -4,18 +4,21 @@
 
 
 {% block content %}
-     <div class="features">
-         <h1>Main page of the news</h1>
-         <p>Home page for buttons</p>
-         <a href="https://github.com/Kirito85?tab=repositories" ><button class="btn btn-warning">My Portfolio</button></a>
-         {% if news %}
-             {% for el in news %}
+    <div class="features">
+        <div class="header-btn">
+            <h1>Main page of the news</h1>
+            <a href="https://github.com/Kirito85?tab=repositories" ><button class="btn rounded-pill custom-btn-bg">My Portfolio</button></a>
+        </div>
+        {% if news %}
+            {% for el in news %}
+            <div class="filesizeformat">
                 <div class="alert alert-warning">
                     <h3>{{ el.title }}</h3>
                     <h6>{{ el.anons }}</h6>
                     <h9>{{ el.full_text }}</h9>
-                    <a href="{% url 'news_detail' el.id %}"><button class="btn btn-warning">Read closer</button></a>
+                    <a href="{% url 'news_detail' el.id %}"><button class="btn rounded-pill custom1-btn-bg">Read closer</button></a>
                 </div>
+            </div>
              {% endfor %}
          {% else %}
             <p>Zero news!</p>

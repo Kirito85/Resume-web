@@ -59,7 +59,7 @@ main .header-btn {
 
 
 main .features h1 {font-size:50px; margin-top: -55px;margin-left: 175px; color: #e9eff5;}
-main .features p {max-width: auto;margin: 20px auto;text-align: left;float: left; margin-left: 25px; color: #e9eff5;}\
+main .features p {max-width: auto;margin: 20px auto;text-align: left; margin-left: 25px; color: #e9eff5;}\
 
 
 a {
@@ -80,6 +80,7 @@ a {
     text-align: left;
     --bs-alert-bg: #e0caaf;
     --bs-alert-color: #473724;
+    --bs-alert-border-color: #e0caaf;
     margin-left: 451px;
 
 }
@@ -167,4 +168,14 @@ form {
 a{
     color: #ffffff;
     text-decoration: underline;
+}
+
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }

@@ -6,14 +6,16 @@
 {% block content %}
     <div class="features">
          <h1>Form create news</h1>
-         <form method="post">
-             {% csrf_token %}
-             {{ form.title }}<br>
-             {{ form.anons }}<br>
-             {{ form.full_text }}<br>
-             {{ form.date }}<br>
+            <div class='center'>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.title }}<br>
+                    {{ form.anons }}<br>
+                    {{ form.full_text }}<br>
+                    {{ form.date }}<br>
+            </div>
              <span>{{ error }}</span>
-             <button class="btn btn-success rounded-pill" type="submit">create news</button>
+             <button class="btn custom-btn-bg rounded-pill" type="submit">create news</button>
          </form>
     </div>
 

@@ -179,3 +179,17 @@ a{
     flex-direction: column;
     text-align: center;
 }
+
+
+.custom3-btn-bg {
+    background-color: #9DADBD;
+    color: #e9eff5;
+    border: none;
+}
+
+
+.custom3-btn-bg:hover {
+    background-color: #9DADBD;
+    color: #e9eff5; 
+    border-color: #a8b9ca; 
+}

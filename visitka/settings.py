@@ -11,13 +11,11 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
 from pathlib import Path
-from dj_static import Cling
+from django.core.wsgi import get_wsgi_application
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'visitka.settings')
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "app.settings")
-
-application = Cling(get_wsgi_application())
+application = get_wsgi_application()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

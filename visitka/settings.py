@@ -11,11 +11,11 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
 from pathlib import Path
-import os
-from django.core.wsgi import get_wsgi_application
 from dj_static import Cling
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "visitka.settings")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "app.settings")
 
 application = Cling(get_wsgi_application())
 
@@ -126,7 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = 'staticfiles'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
